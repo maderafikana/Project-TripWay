@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar Responsive</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ==========================Navbar start===================================== -->
+    <header class="navbar">
+      <div class="logo">
+        <img src="Assets/Logo/LOGO-2.png" alt="TripWay Logo" />
+        <span>TripWay</span>
+      </div>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#">Home</a>
+        <a href="#Toure">Tour</a>
+        <a href="#Food">Food</a>
+        <a href="#">Activity</a>
+        <a href="#">Currency</a>
+
+        <!-- Language -->
+        <div class="language">
+          <button class="lang-btn" id="langBtn">Bahasa ▾</button>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="#">Indonesia</a>
+            <a href="#">English</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hamburger -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+    <!-- ==========================Navbar end===================================== -->
+
+    <!-- ==========================Header start===================================== -->
+    <section class="hero animate">
+      <div class="hero-slider" id="heroSlider">
+        <div
+          class="slide"
+          style="background-image: url('Assets/Images/gambar1.jpg')"
+        ></div>
+        <div
+          class="slide"
+          style="background-image: url('Assets/Images/gambar2.jpg')"
+        ></div>
+        <div
+          class="slide"
+          style="background-image: url('Assets/Images/gambar3.jpg')"
+        ></div>
+        <div
+          class="slide"
+          style="background-image: url('Assets/Images/gambar4.jpeg')"
+        ></div>
+        <div
+          class="slide"
+          style="background-image: url('Assets/Images/gambar5.png')"
+        ></div>
+      </div>
+
+      <div class="hero-content">
+        <h1 class="hero-title">Tour & Travel Terbaik</h1>
+        <p class="hero-text">
+          Jelajahi dunia bersama kami dengan pengalaman wisata yang nyaman dan
+          berkesan.
+        </p>
+        <a href="#Toure" class="hero-btn">JELAJAHI SEKARANG</a>
+
+        <!-- ================= INFO BOX (BARU) ================= -->
+
+        <!-- >>> TAMBAHKAN DI SINI <<< -->
+        <div class="hero-cards">
+          <div class="hero-card">
+            <img src="Assets/Images/GambarNavbar.jpg" alt="Tour 1" />
+            <div class="card-content">
+              <h4>Best Destination</h4>
+              <p>
+                Nikmati pengalaman wisata terbaik dengan layanan profesional dan
+                destinasi pilihan terbaik di seluruh Indonesia.
+              </p>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <img src="Assets/Images/GambarNavbar.jpg" alt="Tour 2" />
+            <div class="card-content">
+              <h4>Trusted Service</h4>
+              <p>
+                Pelayanan terpercaya dengan tim berpengalaman yang siap menemani
+                perjalanan wisata Anda.
+              </p>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <img src="Assets/Images/GambarNavbar.jpg" alt="Tour 3" />
+            <div class="card-content">
+              <h4>Affordable Price</h4>
+              <p>
+                Harga terjangkau dengan fasilitas lengkap dan kenyamanan terbaik
+                untuk setiap perjalanan.
+              </p>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+        <!-- >>> AKHIR PENAMBAHAN <<< -->
+      </div>
+    </section>
+
+    <!-- ==========================Header start===================================== -->
+
+    <!-- ================= DESTINATIONS SECTION START ================= -->
+    <section class="destinations" id="Toure">
+      <div class="destinations-container">
+        <!-- ===== HEADER DESTINATIONS ===== -->
+        <div class="destinations-header">
+          <h2 class="destinations-title">Destinations</h2>
+          <p class="destinations-text">
+            Jelajahi beragam destinasi menakjubkan di seluruh dunia dan rasakan
+            pesona setiap musim yang memikat di setiap langkah perjalanan Anda
+            yang tak terlupakan dengan
+          </p>
+          <a href="Destination/Destination.html.html" class="culinary-btn">
+            VIEW MORE <span>→</span>
+          </a>
+        </div>
+
+        <!-- ===== GRID DESTINATIONS ===== -->
+        <div class="destinations-grid">
+          <!-- >>> ITEM BESAR (KLIK → HALAMAN BARU) <<< -->
+          <a
+            href="Destination/BaliDestination/DetailDestinationBali.html.html"
+            class="destination-item large"
+            style="background-image: url('Assets/Images/Destinations1.jpg')"
+          >
+            <div class="destination-content">
+              <h3>Bali Island</h3>
+              <span class="line"></span>
+              <p>30 Tours</p>
+            </div>
+          </a>
+
+          <!-- >>> ITEM 2 <<< -->
+          <a
+            href="Destination/NusaPenidaDestination/DetailDestinationNusaPenida.html.html"
+            class="destination-item"
+            style="background-image: url('Assets/Images/Destinations2.jpg')"
+          >
+            <div class="destination-content">
+              <h3>Nusa Penida Island</h3>
+              <span class="line"></span>
+              <p>20 Tours</p>
+            </div>
+          </a>
+
+          <!-- >>> ITEM 3 <<< -->
+          <a
+            href="destination-detail.html"
+            class="destination-item"
+            style="background-image: url('Assets/Images/Destinations3.jpg')"
+          >
+            <div class="destination-content">
+              <h3>Lombok Island</h3>
+              <span class="line"></span>
+              <p>18 Tours</p>
+            </div>
+          </a>
+
+          <!-- >>> ITEM 4 <<< -->
+          <a
+            href="destination-detail.html"
+            class="destination-item"
+            style="background-image: url('Assets/Images/Destinations4.jpg')"
+          >
+            <div class="destination-content">
+              <h3>Jawa Island</h3>
+              <span class="line"></span>
+              <p>25 Tours</p>
+            </div>
+          </a>
+
+          <a
+            href="destination-detail.html"
+            class="destination-item"
+            style="background-image: url('Assets/Images/Destinations5.jpg')"
+          >
+            <div class="destination-content">
+              <h3>Flores Island</h3>
+              <span class="line"></span>
+              <p>25 Tours</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- ================= DESTINATIONS SECTION END ================= -->
+
+    <!-- ================= KULINER NUSANTARA SECTION START ================= -->
+    <section class="culinary" id="Food">
+      <div class="culinary-container">
+        <!-- ===== HEADER KULINER ===== -->
+        <div class="culinary-header">
+          <h2 class="culinary-title">Island Food Delivery</h2>
+          <p class="culinary-text">
+            Menyusuri kelezatan kuliner khas Nusantara yang kaya akan cita rasa,
+            tradisi, dan cerita di setiap sajian. Dari rempah yang menggoda
+            hingga hidangan legendaris yang tak lekang oleh waktu.
+          </p>
+
+          <!-- Button -->
+          <a href="Food/IndexFood.html" class="culinary-btn">
+            VIEW MORE <span>→</span>
+          </a>
+        </div>
+
+        <!-- ===== GRID KULINER ===== -->
+        <div class="culinary-grid">
+          <!-- >>> CARD 1 <<< -->
+          <a
+            href="kuliner-detail.html"
+            class="culinary-card"
+            style="background-image: url('Assets/Images/Kuliner1.jpg')"
+          >
+            <div class="culinary-overlay">
+              <h3>Nusa Penida Food</h3>
+              <p>Masakan khas Minangkabau dengan cita rasa rempah yang kaya.</p>
+            </div>
+          </a>
+
+          <!-- >>> CARD 2 <<< -->
+          <a
+            href="kuliner-detail.html"
+            class="culinary-card"
+            style="background-image: url('Assets/Images/Kuliner2.jpg')"
+          >
+            <div class="culinary-overlay">
+              <h3>Nusa Lembongan Food</h3>
+              <p>
+                Olahan daging panggang dengan bumbu khas dari berbagai daerah.
+              </p>
+            </div>
+          </a>
+
+          <!-- >>> CARD 3 <<< -->
+          <a
+            href="kuliner-detail.html"
+            class="culinary-card"
+            style="background-image: url('Assets/Images/Kuliner3.jpg')"
+          >
+            <div class="culinary-overlay">
+              <h3>Gili Trawangan Food</h3>
+              <p>Kuliner khas Yogyakarta dengan rasa manis yang autentik.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- ================= KULINER NUSANTARA SECTION END ================= -->
+
+    <!-- ========================== FOOTER START ========================== -->
+    <section class="footer">
+      <div class="footer-container">
+        <!-- ===== LEFT ===== -->
+        <div class="footer-left">
+          <div class="footer-brand">
+            <img src="Assets/Logo/LOGO-2.png" alt="Logo" />
+            <h3>Mitra Explorasi Nusantara</h3>
+          </div>
+
+          <div class="footer-contact">
+            <br />
+            <h4>CALL US</h4>
+            <p>0853-2098-3698</p>
+            <br />
+            <h4>EMAIL US</h4>
+            <p>maderafikana@gmail.com</p>
+          </div>
+
+          <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a href="#">FB</a>
+              <a href="#">IG</a>
+              <a href="#">TT</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== CENTER ===== -->
+        <div class="footer-center">
+          <a href="#" class="footer-link">Home</a>
+          <a href="#" class="footer-link">Tour</a>
+          <a href="#" class="footer-link">Activity</a>
+          <a href="#" class="footer-link">Currency</a>
+        </div>
+
+        <!-- ===== RIGHT ===== -->
+        <div class="footer-right">
+          <img src="Assets/Qr/Qr.png" alt="QR Code" />
+          <p>
+            Scan QR ini dan pesan layanan perjalanan terbaik bersama kami
+            sekarang juga.
+          </p>
+        </div>
+      </div>
+
+      <!-- ===== BOTTOM ===== -->
+      <div class="footer-bottom">
+        <div class="footer-line"></div>
+        <p>© Copyright by Made Rafi Kana 2025</p>
+      </div>
+    </section>
+    <!-- ========================== FOOTER END ========================== -->
+
+    <!-- ================= FOOTER END ================= -->
+
+    <script src="script.js"></script>
+  </body>
+</html>

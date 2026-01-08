@@ -1,0 +1,323 @@
+/* ======================================================
+   GLOBAL RESET
+====================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background: #f4f4f4;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* ======================================================
+     ================= NAVBAR ==============================
+  ====================================================== */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: white;
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 1000;
+  }
+  
+  /* ===== LOGO ===== */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 20px;
+  }
+  
+  .logo img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .logo span {
+    white-space: nowrap;
+  }
+  
+  /* ===== MENU ===== */
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-menu a:hover {
+    color: #38bdf8;
+    transform: translateY(-2px);
+  }
+  
+  /* ===== LANGUAGE ===== */
+  .language {
+    position: relative;
+  }
+  
+  .lang-btn {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .lang-btn:hover {
+    background: #38bdf8;
+    color: #0f172a;
+  }
+  
+  .lang-dropdown {
+    position: absolute;
+    right: 0;
+    top: 36px;
+    background: white;
+    border-radius: 4px;
+    min-width: 120px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+  }
+  
+  .lang-dropdown a {
+    display: block;
+    padding: 8px 12px;
+    color: #0f172a;
+    text-decoration: none;
+  }
+  
+  .lang-dropdown a:hover {
+    background: #e2e8f0;
+  }
+  
+  .language:hover .lang-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  /* ===== HAMBURGER ===== */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+  }
+  
+  /* ======================================================
+     ================= FOOTER ==============================
+  ====================================================== */
+  .footer {
+    background: rgba(15, 23, 42, 0.35);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    color: #f8fafc;
+    padding: 90px 20px 30px;
+    margin-top: 120px;
+  }
+  
+  /* ===== CONTAINER ===== */
+  .footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 50px;
+  }
+  
+  /* ===== LEFT ===== */
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  
+  .footer-brand img {
+    width: 60px;
+  }
+  
+  .footer-brand h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+  
+  .footer-contact p {
+    margin-top: 8px;
+    font-size: 14px;
+    opacity: 0.9;
+  }
+  
+  /* ===== SOCIAL ICONS (ANIMASI AKTIF) ===== */
+  .footer-social {
+    margin-top: 30px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 14px;
+  }
+  
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+  
+    transition: all 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    background: #facc15;
+    color: #0f172a;
+    transform: translateY(-4px);
+  }
+  
+  /* ===== CENTER MENU (ANIMASI AKTIF) ===== */
+  .footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  
+  .footer-link {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  
+    padding: 14px 28px;
+    border-radius: 12px;
+    width: fit-content;
+  
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #f8fafc;
+    text-decoration: none;
+  
+    transition: all 0.35s ease;
+  }
+  
+  .footer-link:hover {
+    background: rgba(250, 204, 21, 0.18);
+    border-color: #facc15;
+    color: #facc15;
+  
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(250, 204, 21, 0.25);
+  }
+  
+  /* ===== RIGHT ===== */
+  .footer-right {
+    text-align: center;
+  }
+  
+  .footer-right img {
+    width: 140px;
+    margin-bottom: 16px;
+  }
+  
+  .footer-right p {
+    font-family: "Playfair Display", serif;
+    font-size: 15px;
+    line-height: 1.8;
+    opacity: 0.9;
+  }
+  
+  /* ===== BOTTOM ===== */
+  .footer-bottom {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .footer-line {
+    width: 70%;
+    height: 1px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.2);
+    margin-bottom: 18px;
+  }
+  
+  .footer-bottom p {
+    font-size: 13px;
+    opacity: 0.7;
+  }
+  
+  /* ======================================================
+     ================= RESPONSIVE ==========================
+  ====================================================== */
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      background: #0f172a;
+      position: absolute;
+      top: 64px;
+      right: 0;
+      width: 100%;
+      padding: 16px;
+    }
+  
+    .nav-menu.active {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .footer-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  
+    .social-icons {
+      justify-content: center;
+    }
+  }
+  

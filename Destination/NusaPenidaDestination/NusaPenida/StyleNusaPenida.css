@@ -1,0 +1,731 @@
+/* ======================================================
+   GLOBAL RESET
+====================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f4f4f4;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ======================================================
+     ================= NAVBAR ==============================
+  ====================================================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: white;
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1000;
+}
+
+/* ===== LOGO ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.logo img {
+  width: 32px;
+  height: 32px;
+}
+
+.logo span {
+  white-space: nowrap;
+}
+
+/* ===== MENU ===== */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #38bdf8;
+  transform: translateY(-2px);
+}
+
+/* ===== LANGUAGE ===== */
+.language {
+  position: relative;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.lang-btn:hover {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+.lang-dropdown {
+  position: absolute;
+  right: 0;
+  top: 36px;
+  background: white;
+  border-radius: 4px;
+  min-width: 120px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.lang-dropdown a {
+  display: block;
+  padding: 8px 12px;
+  color: #0f172a;
+  text-decoration: none;
+}
+
+.lang-dropdown a:hover {
+  background: #e2e8f0;
+}
+
+.language:hover .lang-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+}
+
+/* ======================================================
+   ================= MAIN DETAIL =========================
+====================================================== */
+
+.main-detail {
+  position: relative;
+  padding-top: 0; /* penting: agar tidak ada jarak dengan navbar */
+  background: #f4f4f4;
+}
+
+/* ===== HERO SECTION ===== */
+.main-hero {
+  width: 100%;
+  height: 75vh;
+  padding-top: 80px; /* tinggi navbar */
+  background: linear-gradient(rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.25)),
+    url("../../../Assets/Destination/ImgaeBali/1.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* ===== HERO CONTENT ===== */
+.hero-content {
+  max-width: 900px;
+  padding: 0 60px;
+  color: #f8fafc;
+}
+
+.hero-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 46px;
+  margin-bottom: 18px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  opacity: 0.95;
+  max-width: 760px;
+  margin-bottom: 28px;
+}
+
+/* ===== BUTTON ===== */
+.hero-btn {
+  display: inline-block;
+  padding: 14px 34px;
+  background: #facc15;
+  color: #0f172a;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.35s ease;
+  box-shadow: 0 12px 30px rgba(250, 204, 21, 0.35);
+}
+
+.hero-btn:hover {
+  transform: translateY(-4px);
+  background: #fde047;
+  box-shadow: 0 20px 45px rgba(250, 204, 21, 0.45);
+}
+
+/* ===== IMAGE SHOWCASE ===== */
+.main-gallery {
+  position: relative;
+  margin-top: -120px; /* overlap ke hero */
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding-bottom: 90px;
+  z-index: 10;
+}
+
+.main-gallery img {
+  width: 340px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 26px;
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.4);
+  transition: all 0.4s ease;
+}
+
+.main-gallery img:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+/* ======================================================
+   ================= RESPONSIVE ==========================
+====================================================== */
+@media (max-width: 992px) {
+  .hero-content {
+    padding: 0 28px;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .main-gallery {
+    flex-direction: column;
+    align-items: center;
+    margin-top: -80px;
+    gap: 26px;
+  }
+
+  .main-gallery img {
+    width: 92%;
+    max-width: 420px;
+    height: 240px;
+  }
+}
+
+/* ======================================================
+   ================= TOUR INFORMATION ====================
+====================================================== */
+
+.tour-info {
+  padding: 100px 20px;
+  background: linear-gradient(to bottom, #f8fafc, #eef2f7);
+}
+
+.tour-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+/* ===== INFO BOX ===== */
+.info-box {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 26px;
+  padding: 40px 36px;
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.08);
+  transition: all 0.4s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 40px 90px rgba(15, 23, 42, 0.12);
+}
+
+/* ===== HEADING ===== */
+.info-box h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  margin-bottom: 22px;
+  color: #0f172a;
+  position: relative;
+}
+
+.info-box h3::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: #facc15;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  border-radius: 6px;
+}
+
+/* ===== LIST ===== */
+.info-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.info-box li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 14px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #334155;
+}
+
+.info-box li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #facc15;
+  font-weight: 700;
+}
+
+/* ======================================================
+   ================= RESPONSIVE ==========================
+====================================================== */
+
+@media (max-width: 768px) {
+  .tour-container {
+    grid-template-columns: 1fr;
+  }
+
+  .info-box {
+    padding: 34px 26px;
+  }
+}
+
+/* ======================================================
+   ================= PRICE SECTION =======================
+====================================================== */
+
+.price-section {
+  position: relative;
+  padding: 120px 20px;
+  background: url("../../Assets/Destination/Bali1.jpg") center bottom / cover
+    no-repeat;
+}
+
+/* ===== GRADIENT FADE (CLEAR BOTTOM → FADE TOP) ===== */
+.price-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.1),
+    rgba(248, 250, 252, 0.95)
+  );
+  z-index: 1;
+}
+
+/* ===== CONTAINER ===== */
+.price-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===== HEADING ===== */
+.price-heading {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.price-heading h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  margin-bottom: 14px;
+  color: #0f172a;
+}
+
+.price-heading p {
+  font-size: 16px;
+  max-width: 600px;
+  margin: auto;
+  color: #475569;
+  line-height: 1.8;
+}
+
+/* ===== PRICE CARD TEXT ENHANCEMENT ===== */
+.package-tagline {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f766e;
+  margin-bottom: 6px;
+}
+
+.package-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 18px;
+}
+
+.recommend-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+/* ===== GRID ===== */
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+}
+
+/* ===== CARD ===== */
+.price-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 28px;
+  padding: 42px 34px;
+  text-align: center;
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.price-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 40px 90px rgba(15, 23, 42, 0.15);
+}
+
+.price-card h3 {
+  font-size: 20px;
+  margin-bottom: 14px;
+  color: #0f172a;
+}
+
+.price {
+  font-size: 30px;
+  font-weight: 700;
+  color: #0f172a;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.price small {
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.price-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 28px;
+}
+
+/* ===== PRICE CARD CHECK LIST ===== */
+.price-checklist {
+  list-style: none;
+  padding-left: 0;
+  margin: 14px 0 26px;
+  text-align: left;
+}
+
+.price-checklist li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #334155;
+}
+
+.price-checklist li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #facc15; /* hijau elegan */
+  font-weight: 700;
+}
+
+/* ===== BUTTON ===== */
+.price-btn {
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 50px;
+  background: #e2e8f0;
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.35s ease;
+}
+
+.price-btn:hover {
+  background: #cbd5f5;
+  transform: translateY(-3px);
+}
+
+/* ===== BEST DEAL ===== */
+.best-deal {
+  border: 2px solid #facc15;
+  transform: scale(1.05);
+}
+
+.badge {
+  position: absolute;
+  top: -16px;
+  right: 24px;
+  background: #facc15;
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(250, 204, 21, 0.4);
+}
+
+.highlight {
+  background: #facc15;
+}
+
+.highlight:hover {
+  background: #fde047;
+}
+
+/* ======================================================
+   ================= RESPONSIVE ==========================
+====================================================== */
+
+@media (max-width: 992px) {
+  .price-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .best-deal {
+    transform: none;
+  }
+}
+
+/* ======================================================
+     ================= FOOTER ==============================
+  ====================================================== */
+.footer {
+  background: rgba(15, 23, 42, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #f8fafc;
+  padding: 90px 20px 30px;
+  margin-top: 0px;
+}
+
+/* ===== CONTAINER ===== */
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 50px;
+}
+
+/* ===== LEFT ===== */
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-brand img {
+  width: 60px;
+}
+
+.footer-brand h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.footer-contact p {
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ===== SOCIAL ICONS (ANIMASI AKTIF) ===== */
+.footer-social {
+  margin-top: 30px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #facc15;
+  color: #0f172a;
+  transform: translateY(-4px);
+}
+
+/* ===== CENTER MENU (ANIMASI AKTIF) ===== */
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.footer-link {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  padding: 14px 28px;
+  border-radius: 12px;
+  width: fit-content;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f8fafc;
+  text-decoration: none;
+
+  transition: all 0.35s ease;
+}
+
+.footer-link:hover {
+  background: rgba(250, 204, 21, 0.18);
+  border-color: #facc15;
+  color: #facc15;
+
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(250, 204, 21, 0.25);
+}
+
+/* ===== RIGHT ===== */
+.footer-right {
+  text-align: center;
+}
+
+.footer-right img {
+  width: 140px;
+  margin-bottom: 16px;
+}
+
+.footer-right p {
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+/* ===== BOTTOM ===== */
+.footer-bottom {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.footer-line {
+  width: 70%;
+  height: 1px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: 18px;
+}
+
+.footer-bottom p {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+/* ======================================================
+     ================= RESPONSIVE ==========================
+  ====================================================== */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: #0f172a;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    width: 100%;
+    padding: 16px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
